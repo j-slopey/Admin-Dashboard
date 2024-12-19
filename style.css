@@ -16,6 +16,7 @@ body {
 body * {
     margin: 0;
     padding: 0;
+    font-weight: bold;
 }
 
 .circle {
@@ -30,11 +31,26 @@ small {
     font-weight: bold;
 }
 
+.pill-shape {
+    border-radius: 100px;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+a, button {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 .container {
     display: grid;
     grid-template: 200px 1fr / clamp(225px, 25vw, 275px) 1fr;
-    height: 100%;
-    width: 100%;
+
 }
 
 .sidebar {
@@ -47,13 +63,12 @@ small {
 }
 
 .sidebar-item {
-    text-decoration: none;
     color: white;
     display: grid;
     align-items: center;
     column-gap: 12px;
     grid-template-columns: 1fr 3fr;
-
+    text-decoration: none;
     img {
         margin: auto;
     }
@@ -77,11 +92,11 @@ small {
     background-color: white;
     position: relative;
     display: grid;
-    grid-template: 1fr 1fr / minmax(410px, 1fr) clamp(250px, 30%, 350px);
-    padding: 0 24px;
+    grid-template: 1fr 1fr / minmax(350px, 1fr) minmax(300px, 30%);
+    column-gap: 12px;
+    padding: 0 24px 24px;
 
     & a {
-        text-decoration: none;
         color: black;
     }
 
@@ -101,20 +116,16 @@ form.search {
         width: var(--icon-size);
         height: auto;
         margin: auto 0 auto auto;
-        background: transparent;
-        cursor: pointer;
-        border: none;
     }
 
     & input {
         border: none;
         height: var(--icon-size);
         margin: auto 0;
-        border-radius: 36px;
         background-color: whitesmoke;
         padding: 0 12px;
         caret-color: lightgray;
-        max-width: 45vw;
+        width: clamp(40vw, 1fr, 45vw);
 
         &:focus {
             outline: 1px solid lightgray;
@@ -122,10 +133,11 @@ form.search {
     }
 }
 
-.account-actions {
+.account-details {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     align-items: center;
+    min-width: 250px;
 
     & .notifications {
         padding: 0;
@@ -146,7 +158,7 @@ form.search {
             height: var(--pic-size);
 
             &:hover {
-                box-shadow: 1px 1px 2px var(--darkgrey);
+                box-shadow: 1px 1px 1px grey;
             }
         }
     }
@@ -168,11 +180,31 @@ form.search {
         grid-row: span 2;
     }
     & small {
-        font-size: 14px;
-        align-content: end;
+        margin-bottom: -1.5em;
+        font-size: 15px;
+        align-content: center;
     }
 
 }
+
+.actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    column-gap: clamp(2px, 8%, 10px);
+    & button {
+        height: 35px;
+        width: 100px;
+        background-color: var(--primary);
+        color: white;
+        &:hover {
+            text-decoration: none;
+            box-shadow: 1px 1px 2px grey;
+        }
+    }
+}
+
+
 .content {
     background-color: var(--secondary);
     grid-row: 2 / 3;
