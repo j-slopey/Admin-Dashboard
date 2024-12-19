@@ -17,10 +17,13 @@ body * {
     margin: 0;
     padding: 0;
 }
+.circle {
+    border-radius: 50%;
+}
 
 .container {
     display: grid;
-    grid-template: 200px 1fr / 250px 1fr;
+    grid-template: 200px 1fr / clamp(225px, 25vw, 275px) 1fr;
     height: 100%;
     width: 100%;
 }
@@ -34,18 +37,6 @@ body * {
     padding: 5%;
 }
 
-.header {
-    grid-column: 2 / 3;
-    box-shadow: 2px 3px 4px 0 darkgray;
-    background-color: white;
-    position: relative;
-}
-
-.content {
-    background-color: var(--lightpurp);
-    grid-row: 2 / 3;
-}
-
 .sidebar-item {
     text-decoration: none;
     color: white;
@@ -53,7 +44,7 @@ body * {
     align-items: center;
     column-gap: 12px;
     grid-template-columns: 1fr 3fr;
-    & img {
+    img {
         margin: auto;
     }
     & h1{
@@ -69,8 +60,90 @@ body * {
     & img{
         width: 60%;
     }
-    &.help {
+}
+
+.header {
+    --icon-size: 28px;
+    grid-column: 2 / 3;
+    box-shadow: 2px 3px 4px 0 darkgray;
+    background-color: white;
+    position: relative;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr clamp(250px,25%,350px);
+    padding: 0 12px;
+    & a {
+        text-decoration: none;
+        color: black;
+    }
+    /*The section below is used to give an easy visual for grid borders*/
+    & * {
+        /*border: 2px solid black;*/
+    }
+}
+
+form.search {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    grid-gap: 8px;
+    & button {
+        width: var(--icon-size);
+        height: auto;
+        margin: auto 0 auto auto;
+        background: transparent;
+        cursor: pointer;
+        border: none;
+    }
+    & input {
+        border: none;
+        height: var(--icon-size);
+        margin: auto 0;
+        border-radius: 36px;
+        background-color: whitesmoke;
+        padding: 0 12px;
+        caret-color: lightgray;
+        max-width: 45vw;
+    }
+    & input:focus {
+        outline: 1px solid lightgray;
+    }
+
+}
+
+.account-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: center;
+    & .notifications {
+        padding: 0;
+        margin: auto;
+        height: var(--icon-size);
+        width: var(--icon-size);
+    }
+    & .profile {
+        --pic-size: 52px;
+        margin: auto;
+        display: grid;
+        height: var(--pic-size);
+        width: var(--pic-size);
+        & img {
+            width: var(--pic-size);
+            height: var(--pic-size);
+            box-shadow: 0 0 2px black;
+        }
+
+    }
+    & .account-settings {
+        text-align: center;
+        align-content: center;
+        font-weight: bold;
 
     }
 }
+
+.content {
+    background-color: var(--lightpurp);
+    grid-row: 2 / 3;
+}
+
+
 
