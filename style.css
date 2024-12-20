@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 :root {
-    --darkgrey: #1f2937;
+    --darkgrey: #374151;
     --primary: #6d28d9;
     --secondary: #e9d5ff;
+    --tertiary: #581c87;
+
+    --icon-size: 28px;
 
 }
 
@@ -25,6 +28,14 @@ body * {
 
 h1 {
     font-size: 28px;
+}
+
+h2 {
+    font-size: 20px;
+    align-content: center;
+}
+p {
+    font-weight: normal;
 }
 
 small {
@@ -86,7 +97,6 @@ a, button {
 }
 
 .header {
-    --icon-size: 28px;
     grid-column: 2 / 3;
     box-shadow: 1px 3px 3px 0 darkgray;
     background-color: white;
@@ -100,11 +110,6 @@ a, button {
         color: black;
     }
 
-    /*The section below is used to give an easy visual for grid borders*/
-
-    & * {
-        /*border: 2px solid black;*/
-    }
 }
 
 form.search {
@@ -204,10 +209,81 @@ form.search {
     }
 }
 
+.card {
+    background-color: white;
+    border-radius: 8px;
+    display: grid;
+    padding: var(--spacing);
+    & h2 {
+        color: black;
+    }
+}
 
 .content {
+    --spacing: 18px;
+    color: var(--darkgrey);
     background-color: var(--secondary);
     grid-row: 2 / 3;
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(3, 1fr);
+    padding: 0 var(--spacing) var(--spacing);
+    row-gap: var(--spacing);
+
+    & .projects{
+        grid-row: 1 / span 6;
+        grid-column: span 2;
+        display: grid;
+        grid-template: var(--spacing) repeat(3, 1fr) / repeat(2, 1fr);
+        grid-gap: var(--spacing);
+        padding: var(--spacing);
+        & h2 {
+            grid-column: span 2;
+        }
+        & .card {
+            box-shadow: -5px 0 0 0 var(--tertiary);
+            grid-template: 1fr var(--icon-size) / 1fr 150px;
+            row-gap: 10px;
+            & > div {
+                grid-column: span 2;
+                grid-row: span 2;
+                display: grid;
+                align-content: center;
+                text-align: left;
+                &.links {
+                    grid-template-columns: 1fr repeat(3, var(--icon-size));
+                    column-gap: clamp(10px, 8%, 25px);
+                    & a {
+                        width: var(--icon-size);
+                        align-content: center;;
+                    }
+                }
+            }
+            & img {
+                width: var(--icon-size);
+            }
+
+        }
+    }
+    & .announcements, .trending {
+        grid-column: 3;
+        grid-row: span 3;
+        grid-gap: var(--spacing);
+        display: grid;
+        grid-template: var(--spacing) 1fr / 1fr;
+    }
+    & .announcements {
+        padding: var(--spacing) var(--spacing) 0 var(--spacing);
+    }
+    & .trending {
+        padding: var(--spacing);
+    }
+
+
+
+    /*The section below is used to give an easy visual for grid borders*/
+    & * {
+        /*border: 2px solid black;*/
+    }
 }
 
 
