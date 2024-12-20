@@ -6,6 +6,7 @@
     --secondary: #e9d5ff;
     --tertiary: #581c87;
 
+    --profpic-size: 48px;
     --icon-size: 28px;
 
 }
@@ -152,15 +153,14 @@ form.search {
     }
 
     & .profile {
-        --pic-size: 48px;
         margin: auto;
         display: grid;
-        height: var(--pic-size);
-        width: var(--pic-size);
+        height: var(--profpic-size);
+        width: var(--profpic-size);
 
         & img {
-            width: var(--pic-size);
-            height: var(--pic-size);
+            width: var(--profpic-size);
+            height: var(--profpic-size);
 
             &:hover {
                 box-shadow: 1px 1px 1px grey;
@@ -270,12 +270,30 @@ form.search {
         grid-gap: var(--spacing);
         display: grid;
         grid-template: var(--spacing) 1fr / 1fr;
+
     }
     & .announcements {
         padding: var(--spacing) var(--spacing) 0 var(--spacing);
     }
     & .trending {
         padding: var(--spacing);
+        & a{
+            color: black;
+            align-content: end;
+        }
+        &.card {
+            grid-template-rows: repeat(4, 1fr);
+        }
+    }
+
+    .person {
+        display: grid;
+        grid-template:1fr 1fr / var(--profpic-size) 1fr;
+        & img {
+            grid-row: span 2;
+            margin: auto;
+            width: var(--profpic-size);
+        }
     }
 
 
