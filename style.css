@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 :root {
-    --darkgrey: #374151;
+    --darkgrey: #4b5563;
     --primary: #6d28d9;
     --secondary: #e9d5ff;
     --tertiary: #581c87;
@@ -271,17 +271,26 @@ form.search {
         grid-gap: var(--spacing);
         display: grid;
         grid-template: var(--spacing) 1fr / 1fr;
-
-    }
-    & .announcements {
-        padding: var(--spacing) var(--spacing) 0 var(--spacing);
-    }
-    & .trending {
-        padding: var(--spacing);
         & a{
             color: black;
             align-content: end;
         }
+
+    }
+    & .announcements {
+        padding: var(--spacing) var(--spacing) 0 var(--spacing);
+        font-size: 14px;
+        & .card {
+            row-gap: 12px;
+            & > div:not(:last-child) {
+                border-bottom: 1px solid var(--darkgrey);
+            }
+        }
+
+    }
+    & .trending {
+        padding: var(--spacing);
+
         &.card {
             grid-template-rows: repeat(4, 1fr);
         }
@@ -291,6 +300,9 @@ form.search {
         display: grid;
         column-gap: 8px;
         grid-template:1fr 1fr / var(--profpic-size) 1fr;
+        & a {
+            font-weight: normal;
+        }
         & img {
             grid-row: span 2;
             margin: auto;
@@ -300,7 +312,7 @@ form.search {
 
 
 
-    /*The section below is used to give an easy visual for grid borders*/
+    /*The section below is used to give an easy visual for grid borders when debugging*/
     & * {
         /*border: 2px solid black;*/
     }
