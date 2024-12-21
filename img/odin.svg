@@ -2,7 +2,12 @@
 viewBox = "0 0 380 508"
 width="380"
 height="508">
-<g fill="#6d28d9" stroke="#6d28d9" stroke-width="1"><path d="
+    <style>
+        :root {
+        --color: #14b8a6;
+        }
+    </style>
+<g fill="var(--color)" stroke="#0ea5e9" stroke-width="1"><path d="
 M 0.00 9.00 
 C 12.34 57.12 24.98 101.40 35.00 150.00
 C 47.74 158.94 57.79 172.93 70.00 183.00
@@ -69,27 +74,27 @@ C 279.08 293.86 270.85 358.46 287.20 400.25 C 303.54 442.03 281.07 428.14 261.00
 
 
 
-<g fill="None" fill-opacity="0.0" stroke="black" stroke-width="1"><path d="
+<g fill="None" fill-opacity="0.0" stroke="var(--color)" stroke-width="1"><path d="
 M 70.00 42.00 
 C 48.41 31.41 30.04 22.16 9.00 10.00
 C 30.91 65.17 19.29 126.94 70.00 173.00
 C 70.00 129.33 70.00 85.67 70.00 42.00 Z"/>
 </g>
-<g fill="None" fill-opacity="0.0" stroke="black" stroke-width="1"><path d="
+<g fill="None" fill-opacity="0.0" stroke="var(--color)" stroke-width="1"><path d="
 M 371.00 10.00 
 C 347.88 21.43 326.88 32.59 304.00 42.00
 C 304.00 85.67 304.00 129.33 304.00 173.00
 C 315.22 166.04 323.87 154.26 335.00 146.00
 C 345.13 100.00 359.30 56.08 371.00 10.00 Z"/>
 </g>
-<g fill="None" fill-opacity="0.0" stroke="black" stroke-width="1"><path d="
+<g fill="None" fill-opacity="0.0" stroke="var(--color)" stroke-width="1"><path d="
 M 296.00 109.00 
 C 243.79 70.88 134.02 71.42 77.00 110.00
 C 82.17 154.06 64.67 212.93 90.00 244.00
 C 96.48 223.54 108.68 211.30 131.25 202.26 C 153.82 193.23 172.04 216.10 187.26 218.74 C 202.47 221.39 223.37 192.07 245.25 201.61 C 267.13 211.14 278.20 223.66 290.00 244.00
 C 302.38 210.57 293.18 152.76 296.00 109.00 Z"/>
 </g>
-<g fill="None" fill-opacity="0.0" stroke="black" stroke-width="1"><path d="
+<g fill="None" fill-opacity="0.0" stroke="var(--color)" stroke-width="1"><path d="
 M 189.00 231.00 
 C 171.08 209.54 135.25 200.96 110.76 222.75 C 86.27 244.54 101.72 275.87 118.00 294.00
 C 141.24 281.13 168.11 268.30 192.00 258.00
@@ -101,27 +106,27 @@ C 99.03 217.45 167.16 212.02 170.07 234.07 C 172.98 256.13 135.17 273.25 119.00 
 M 241.00 222.00 
 C 255.51 226.96 248.54 249.06 234.70 244.29 C 220.86 239.52 226.41 222.24 241.00 222.00 Z"/>
 </g>
-<g fill="#6d28d9" fill-opacity="1" stroke="#6d28d9" stroke-width="1"><path d="
+<g fill="var(--color)" fill-opacity="1" stroke="var(--color)" stroke-width="1"><path d="
 M 119.00 256.00 
 C 135.17 273.25 172.98 256.13 170.07 234.07 C 167.16 212.02 99.03 217.45 119.00 256.00 Z"/>
 </g>
-<g fill="#6d28d9" fill-opacity="1" stroke="black" stroke-width="1"><path d="
+<g fill="var(--color)" fill-opacity="1" stroke="var(--color)" stroke-width="1"><path d="
 M 241.00 222.00 
 C 226.41 222.24 220.86 239.52 234.70 244.29 C 248.54 249.06 255.51 226.96 241.00 222.00 Z"/>
 </g>
-<g fill="None" fill-opacity="0.0" stroke="black" stroke-width="1"><path d="
+<g fill="None" fill-opacity="0.0" stroke="var(--color)" stroke-width="1"><path d="
 M 82.00 402.00 
 C 90.63 375.75 92.69 347.30 103.81 320.25 C 114.93 293.20 88.98 260.22 75.00 236.00
 C 66.31 270.79 58.09 305.13 49.00 337.00
 C 62.01 358.08 68.89 380.41 82.00 402.00 Z"/>
 </g>
-<g fill="None" fill-opacity="0.0" stroke="black" stroke-width="1"><path d="
+<g fill="None" fill-opacity="0.0" stroke="var(--color)" stroke-width="1"><path d="
 M 331.00 337.00 
 C 319.60 303.75 311.01 270.93 300.00 238.00
 C 294.89 264.29 269.50 282.77 273.80 309.75 C 278.10 336.74 289.90 371.15 296.00 402.00
 C 309.07 380.39 317.98 357.35 331.00 337.00 Z"/>
 </g>
-<g fill="None" fill-opacity="0.0" stroke="black" stroke-width="1"><path d="
+<g fill="None" fill-opacity="0.0" stroke="var(--color)" stroke-width="1"><path d="
 M 192.00 267.00
 C 145.68 271.87 150.40 318.10 142.92 353.92 C 135.44 389.74 129.66 426.45 121.00 462.00
 C 144.29 477.77 166.95 486.90 190.00 501.00
@@ -131,18 +136,18 @@ M 205.00 285.00
 C 215.15 321.36 165.44 322.22 175.00 285.00
 C 184.42 286.66 195.60 286.65 205.00 285.00 Z"/>
 </g>
-<g fill="#6d28d9" fill-opacity="1" stroke="black" stroke-width="1"><path d="
+<g fill="var(--color)" fill-opacity="1" stroke="var(--color)" stroke-width="1"><path d="
 M 205.00 285.00 
 C 195.60 286.65 184.42 286.66 175.00 285.00
 C 165.44 322.22 215.15 321.36 205.00 285.00 Z"/>
 </g>
-<g fill="None" fill-opacity="0.0" stroke="black" stroke-width="1"><path d="
+<g fill="None" fill-opacity="0.0" stroke="var(--color)" stroke-width="1"><path d="
 M 147.00 288.00 
 C 133.01 293.97 126.14 299.10 116.00 302.00
 C 108.40 336.68 96.23 377.49 87.26 411.25 C 78.30 445.01 103.57 429.10 117.00 450.00
 C 125.88 395.34 135.94 342.26 147.00 288.00 Z"/>
 </g>
-<g fill="None" fill-opacity="0.0" stroke="black" stroke-width="1"><path d="
+<g fill="None" fill-opacity="0.0" stroke="var(--color)" stroke-width="1"><path d="
 M 261.00 450.00 
 C 281.07 428.14 303.54 442.03 287.20 400.25 C 270.85 358.46 279.08 293.86 234.00 289.00
 C 242.62 343.17 252.58 395.68 261.00 450.00 Z"/>
