@@ -163,7 +163,7 @@ form.search {
             height: var(--profpic-size);
 
             &:hover {
-                box-shadow: 1px 1px 1px grey;
+                box-shadow: 1px 1px 1px var(--tertiary);
             }
         }
     }
@@ -205,7 +205,8 @@ form.search {
         color: white;
         &:hover {
             text-decoration: none;
-            box-shadow: 1px 1px 2px grey;
+            background-color: var(--tertiary);
+            box-shadow: 1px 1px 2px var(--tertiary);
         }
     }
 }
@@ -244,6 +245,9 @@ form.search {
             box-shadow: -5px 0 0 0 var(--tertiary);
             grid-template: 1fr var(--icon-size) / 1fr 150px;
             row-gap: 10px;
+            & img {
+                width: var(--icon-size);
+            }
             & > div {
                 grid-column: span 2;
                 grid-row: span 2;
@@ -258,9 +262,6 @@ form.search {
                         align-content: center;;
                     }
                 }
-            }
-            & img {
-                width: var(--icon-size);
             }
 
         }
