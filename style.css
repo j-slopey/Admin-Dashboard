@@ -183,6 +183,7 @@ form.search {
     & img {
         margin: auto 0;
         grid-row: span 2;
+        height: 68px;
     }
     & small {
         margin-bottom: -1.5em;
@@ -288,6 +289,7 @@ form.search {
 
     .person {
         display: grid;
+        column-gap: 8px;
         grid-template:1fr 1fr / var(--profpic-size) 1fr;
         & img {
             grid-row: span 2;
